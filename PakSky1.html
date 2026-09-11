@@ -1810,15 +1810,15 @@
             transform: scale(1.05);
         }
 
-        @media (max-width: 1024px) {
-            .services-grid { grid-template-columns: 1fr; }
-            .why-grid { grid-template-columns: repeat(3, 1fr); }
-            .process-grid { grid-template-columns: repeat(2, 1fr); gap: 48px; }
-            .process-line { display: none; }
-            .footer-grid { grid-template-columns: 1fr; }
-        }
+        @media (max-width: 767px) {
+    .services-grid { grid-template-columns: 1fr; }
+    .why-grid { grid-template-columns: repeat(3, 1fr); }
+    .process-grid { grid-template-columns: repeat(2, 1fr); gap: 48px; }
+    .process-line { display: none; }
+    .footer-grid { grid-template-columns: 1fr; }
+}
 
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             .container { padding: 0 24px; }
 
             nav { display: none; }
@@ -1868,7 +1868,7 @@
   object-fit: contain;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   #header .logo img {
     height: 42px;
     max-width: 130px;
@@ -1898,7 +1898,7 @@
   font-style: italic;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   #header .logo {
     gap: 9px;
   }
@@ -1933,7 +1933,7 @@
 }
 
 /* Keep enough room below the badge on mobile */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   #home.hero {
     padding-bottom: 90px;
   }
@@ -1956,6 +1956,1469 @@
 .footer-bottom {
     justify-content: center;
     text-align: center;
+}
+
+</style>
+
+<style>
+
+/* =====================================================
+   PAKSKY — FINAL MOBILE VIEW FIX
+===================================================== */
+
+@media (max-width: 767px) {
+
+    html {
+        scroll-behavior: auto;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+        cursor: auto;
+    }
+
+
+    /* ================= HEADER ================= */
+
+    header,
+    header.scrolled {
+        padding: 12px 0 !important;
+    }
+
+    .header-inner {
+        width: 100%;
+        min-height: 48px;
+    }
+
+    #header .logo img {
+        height: 38px !important;
+        max-width: 110px !important;
+    }
+
+    #header .logo {
+        gap: 7px !important;
+    }
+
+    #header .logo .paksky-name {
+        font-size: 21px !important;
+    }
+
+    .hamburger {
+        display: flex;
+        cursor: pointer;
+    }
+
+
+    /* ================= CONTAINER ================= */
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+    }
+
+
+    /* ================= HERO ================= */
+
+    #home.hero,
+    .hero {
+        min-height: auto !important;
+
+        padding-top: 105px !important;
+        padding-bottom: 60px !important;
+
+        display: block;
+
+        overflow: hidden !important;
+    }
+
+    .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-label {
+        margin-bottom: 16px;
+        font-size: 0.68rem;
+        letter-spacing: 2.5px;
+    }
+
+    .hero-label::before {
+        width: 28px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.2rem, 11vw, 3rem) !important;
+        line-height: 1.08 !important;
+        letter-spacing: -0.7px;
+        margin-bottom: 20px;
+    }
+
+    .hero-text {
+        width: 100%;
+        max-width: none;
+
+        font-size: 1.05rem;
+        line-height: 1.65;
+
+        margin-bottom: 28px;
+    }
+
+
+    /* HERO BUTTONS */
+
+    .hero-buttons {
+        width: 100%;
+
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+
+        gap: 12px;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 14px 18px;
+    }
+
+
+    /* ================= HERO IMAGE ================= */
+
+    .hero-visual {
+        width: 100%;
+
+        margin-top: 4px;
+
+        transform: none !important;
+        animation: none !important;
+
+        overflow: visible;
+    }
+
+    .hero-visual-wrapper {
+        width: 100%;
+
+        animation: none !important;
+        transform: none !important;
+
+        border-radius: 18px;
+    }
+
+    .hero-visual img {
+        width: 100% !important;
+
+        height: auto !important;
+
+        aspect-ratio: 4 / 5;
+
+        object-fit: cover;
+        object-position: center;
+
+        display: block;
+    }
+
+
+    /* GROWTH BADGE */
+
+    .hero-badge {
+        position: relative !important;
+
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+
+        width: calc(100% - 28px);
+
+        margin:
+            -35px
+            auto
+            0 !important;
+
+        padding: 16px 18px;
+
+        animation: none !important;
+        transform: none !important;
+    }
+
+    .hero-badge-icon {
+        width: 42px;
+        height: 42px;
+        flex-shrink: 0;
+    }
+
+    .hero-badge-text strong {
+        font-size: 1.15rem;
+    }
+
+
+    /* REMOVE SCROLL ANIMATION */
+
+    .hero-scroll {
+        display: none !important;
+    }
+
+
+    /* ================= SECTION SPACING ================= */
+
+    .trust,
+    .services,
+    .why,
+    .process,
+    .about,
+    .testimonials,
+    .faq {
+        padding-top: 70px !important;
+        padding-bottom: 70px !important;
+    }
+
+    .final-cta {
+        padding-top: 80px !important;
+        padding-bottom: 80px !important;
+    }
+
+
+    /* ================= HEADINGS ================= */
+
+    .section-heading {
+        font-size: clamp(1.9rem, 9vw, 2.6rem);
+        line-height: 1.12;
+        margin-bottom: 18px;
+    }
+
+    .section-text {
+        font-size: 1.05rem;
+        line-height: 1.65;
+    }
+
+    .services-header,
+    .why-header,
+    .testimonials-header,
+    .faq-header {
+        margin-bottom: 42px !important;
+    }
+
+    .process-header {
+        margin-bottom: 48px !important;
+    }
+
+
+    /* ================= GRIDS ================= */
+
+    .services-grid,
+    .why-grid,
+    .process-grid,
+    .about-grid,
+    .testimonials-grid,
+    .footer-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .services-grid {
+        gap: 20px;
+    }
+
+    .why-grid {
+        gap: 18px;
+    }
+
+    .process-grid {
+        gap: 48px;
+    }
+
+    .testimonials-grid {
+        gap: 20px;
+    }
+
+
+    /* ================= CARDS ================= */
+
+    .service-card {
+        padding: 28px 22px;
+    }
+
+    .why-card {
+        padding: 30px 20px;
+    }
+
+    .testimonial-card {
+        padding: 30px 22px;
+    }
+
+
+    /* ================= ABOUT ================= */
+
+    .about-grid {
+        gap: 38px !important;
+    }
+
+    .about-visual-wrapper {
+        animation: none !important;
+        transform: none !important;
+    }
+
+    .about-visual img {
+        width: 100% !important;
+
+        height: auto !important;
+        max-height: 480px;
+
+        object-fit: contain;
+    }
+
+    .about-accent {
+        display: none;
+    }
+
+    .about-founder {
+        margin-top: 26px;
+
+        padding: 22px 18px;
+
+        transform: none !important;
+    }
+
+
+    /* ================= PROCESS ================= */
+
+    .process-line {
+        display: none !important;
+    }
+
+    .process-step {
+        transform: none !important;
+    }
+
+
+    /* ================= FOOTER ================= */
+
+    footer {
+        padding-top: 55px !important;
+        padding-bottom: 28px !important;
+    }
+
+    .footer-grid {
+        gap: 30px;
+        margin-bottom: 38px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+
+        gap: 10px;
+
+        padding-top: 24px;
+    }
+
+
+    /* ================= REMOVE MOBILE SHAKING ================= */
+
+    .hero-visual-wrapper,
+    .about-visual-wrapper,
+    .hero-badge,
+    .testimonial-quote {
+        animation: none !important;
+    }
+
+}
+
+
+/* Touch devices — hover movement band */
+@media (hover: none) and (pointer: coarse) {
+
+    .service-card:hover,
+    .why-card:hover,
+    .testimonial-card:hover,
+    .process-step:hover,
+    .trust-inner:hover,
+    .about-founder:hover {
+        transform: none !important;
+    }
+
+}
+
+/* =====================================================
+   FINAL FIX — STOP ALL UNWANTED UP/DOWN MOVEMENT
+   DESKTOP + TABLET + MOBILE
+===================================================== */
+
+/* normal scrolling — no automatic smooth movement */
+html {
+    scroll-behavior: auto !important;
+}
+
+
+/* -----------------------------------------
+   FIX HEADER JUMP
+   header height scroll par change nahi hogi
+----------------------------------------- */
+
+header,
+header.scrolled {
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+}
+
+/* sirf visual background animate ho,
+   header size/layout nahi */
+header {
+    transition:
+        background-color .3s ease,
+        background .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease !important;
+}
+
+
+/* -----------------------------------------
+   BACKGROUND BLOBS FREEZE
+----------------------------------------- */
+
+.floating-bg .blob,
+.blob {
+    animation: none !important;
+    transform: none !important;
+}
+
+
+/* -----------------------------------------
+   HERO — COMPLETELY STABLE
+----------------------------------------- */
+
+.hero-visual {
+    transform: none !important;
+}
+
+.hero-visual-wrapper {
+    animation: none !important;
+    transform: none !important;
+}
+
+.hero-badge {
+    animation: none !important;
+    transform: none !important;
+}
+
+.hero-scroll {
+    animation: none !important;
+}
+
+
+/* -----------------------------------------
+   ABOUT IMAGE — STOP FLOATING
+----------------------------------------- */
+
+.about-visual-wrapper {
+    animation: none !important;
+    transform: none !important;
+}
+
+
+/* -----------------------------------------
+   REVEAL ELEMENTS
+   fade rahega, upar se neeche move nahi karega
+----------------------------------------- */
+
+.reveal {
+    transform: none !important;
+    transition:
+        opacity .6s ease !important;
+}
+
+.reveal.visible {
+    transform: none !important;
+}
+
+
+/* -----------------------------------------
+   OTHER CONSTANT MOVEMENT
+----------------------------------------- */
+
+.testimonial-quote {
+    animation: none !important;
+    transform: none !important;
+}
+
+.trust-divider {
+    animation: none !important;
+}
+
+.about-accent {
+    animation: none !important;
+}
+
+.final-cta::after {
+    animation: none !important;
+}
+
+
+/* -----------------------------------------
+   PREVENT CARD MOVEMENT / TILT
+----------------------------------------- */
+
+.service-card,
+.why-card,
+.testimonial-card,
+.process-step,
+.trust-inner,
+.about-founder {
+    transform: none !important;
+}
+
+
+/* cards hover par bhi page ko upar neeche na karein */
+
+.service-card:hover,
+.why-card:hover,
+.testimonial-card:hover,
+.process-step:hover,
+.trust-inner:hover,
+.about-founder:hover {
+    transform: none !important;
+}
+
+</style>
+
+<style>
+
+/* ==================================================
+   PAKSKY — COMPACT PREMIUM MOBILE FOOTER
+   ONLY MOBILE
+================================================== */
+
+@media (max-width: 767px) {
+
+    /* Main footer size */
+    footer.effect-texture {
+        padding: 34px 0 20px !important;
+    }
+
+    footer.effect-texture .container {
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+    }
+
+
+    /* =================================
+       FOOTER GRID
+    ================================= */
+
+    footer .footer-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+
+        gap: 22px !important;
+
+        margin-bottom: 24px !important;
+
+        text-align: center;
+    }
+
+
+    /* =================================
+       BRAND
+    ================================= */
+
+    footer .footer-brand {
+        text-align: center;
+    }
+
+    footer .footer-brand .logo {
+        display: inline-block !important;
+
+        margin: 0 0 6px !important;
+
+        font-size: 1.9rem !important;
+        line-height: 1.1 !important;
+    }
+
+    footer .footer-brand p {
+        max-width: none !important;
+
+        margin: 0 auto !important;
+
+        font-size: 0.95rem !important;
+        line-height: 1.45 !important;
+
+        color: rgba(255,255,255,.58);
+    }
+
+
+    /* =================================
+       EXPLORE + CONNECT TITLES
+    ================================= */
+
+    footer .footer-col h4 {
+        margin-bottom: 10px !important;
+
+        font-size: 0.82rem !important;
+        line-height: 1.2 !important;
+
+        letter-spacing: .12em !important;
+        text-transform: uppercase;
+    }
+
+
+    /* =================================
+       EXPLORE LINKS
+       Vertical ki jagah horizontal
+    ================================= */
+
+    footer .footer-col ul {
+        display: flex !important;
+
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+
+        justify-content: center !important;
+        align-items: center !important;
+
+        gap: 8px !important;
+    }
+
+    footer .footer-col ul li {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    footer .footer-col:not(:last-child) ul li a {
+        display: inline-flex !important;
+
+        align-items: center;
+        justify-content: center;
+
+        padding: 7px 11px !important;
+
+        border-radius: 999px;
+
+        font-size: 0.88rem !important;
+        line-height: 1.2 !important;
+
+        background: rgba(255,255,255,.045);
+
+        border:
+            1px solid
+            rgba(255,255,255,.08);
+    }
+
+    /* Purani hover line remove */
+    footer .footer-col ul li a::before {
+        display: none !important;
+    }
+
+    footer .footer-col ul li a:hover {
+        transform: none !important;
+    }
+
+
+    /* =================================
+       LINKTREE
+    ================================= */
+
+    footer .linktree-btn {
+        padding: 7px 15px !important;
+
+        gap: 9px !important;
+
+        border-radius: 999px !important;
+
+        font-size: 0.88rem !important;
+
+        min-width: auto !important;
+
+        background:
+            rgba(255,255,255,.06) !important;
+    }
+
+    footer .linktree-icon {
+        width: 30px !important;
+        height: 30px !important;
+
+        box-shadow:
+            0 4px 12px
+            rgba(139,115,85,.25) !important;
+    }
+
+    footer .linktree-icon svg {
+        width: 16px !important;
+        height: 16px !important;
+    }
+
+
+    /* =================================
+       COPYRIGHT
+    ================================= */
+
+    footer .footer-bottom {
+        margin: 0 !important;
+
+        padding-top: 18px !important;
+
+        display: flex !important;
+
+        flex-direction: row !important;
+
+        justify-content: center !important;
+        align-items: center !important;
+
+        gap: 0 !important;
+
+        text-align: center !important;
+
+        font-size: 0.78rem !important;
+        line-height: 1.4 !important;
+    }
+
+}
+
+</style>
+
+<style>
+
+/* ==========================================
+   TABLET = DESKTOP STYLE
+   768px TO 1024px
+========================================== */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* Container */
+    .container {
+        max-width: 100% !important;
+        padding-left: 28px !important;
+        padding-right: 28px !important;
+    }
+
+
+    /* ================= HEADER ================= */
+
+    nav {
+        display: flex !important;
+        gap: 18px !important;
+    }
+
+    nav a {
+        font-size: 0.75rem !important;
+    }
+
+    .header-cta {
+        display: block !important;
+    }
+
+    .header-cta .btn {
+        padding: 12px 20px !important;
+        font-size: 0.72rem !important;
+    }
+
+    .hamburger,
+    .mobile-nav {
+        display: none !important;
+    }
+
+    #header .logo img {
+        height: 44px !important;
+        max-width: 135px !important;
+    }
+
+    #header .logo .paksky-name {
+        font-size: 25px !important;
+    }
+
+
+    /* ================= HERO ================= */
+
+    .hero {
+        display: flex !important;
+        min-height: 100vh !important;
+        padding-top: 100px !important;
+        padding-bottom: 100px !important;
+    }
+
+    .hero-grid {
+        display: grid !important;
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(0, 1fr) !important;
+
+        gap: 32px !important;
+
+        align-items: center !important;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.6rem, 5vw, 3.6rem) !important;
+    }
+
+    .hero-text {
+        font-size: 1.05rem !important;
+        line-height: 1.65 !important;
+    }
+
+    .hero-buttons {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 10px !important;
+    }
+
+    .hero-buttons .btn {
+        width: auto !important;
+        padding: 12px 20px !important;
+    }
+
+    .hero-visual {
+        margin-top: 0 !important;
+    }
+
+    .hero-visual img {
+        width: 100% !important;
+        height: 460px !important;
+        aspect-ratio: auto !important;
+        object-fit: cover !important;
+    }
+
+    .hero-badge {
+        position: absolute !important;
+
+        left: -15px !important;
+        bottom: -15px !important;
+
+        width: auto !important;
+        margin: 0 !important;
+
+        padding: 15px 18px !important;
+    }
+
+
+    /* ================= SERVICES ================= */
+
+    .services-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 22px !important;
+    }
+
+
+    /* ================= WHY US ================= */
+
+    .why-grid {
+        grid-template-columns:
+            repeat(5, minmax(0, 1fr)) !important;
+
+        gap: 12px !important;
+    }
+
+    .why-card {
+        padding: 28px 12px !important;
+    }
+
+    .why-card h3 {
+        font-size: 0.95rem !important;
+    }
+
+    .why-card p {
+        font-size: 0.82rem !important;
+    }
+
+
+    /* ================= PROCESS ================= */
+
+    .process-grid {
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr)) !important;
+
+        gap: 14px !important;
+    }
+
+    .process-line {
+        display: block !important;
+    }
+
+    .step-circle {
+        width: 125px !important;
+        height: 125px !important;
+    }
+
+    .step-orbit {
+        width: 145px !important;
+        height: 145px !important;
+    }
+
+    .step-title {
+        font-size: 1.15rem !important;
+    }
+
+    .step-desc {
+        font-size: 0.9rem !important;
+    }
+
+
+    /* ================= ABOUT ================= */
+
+    .about-grid {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(0, 1fr) !important;
+
+        gap: 40px !important;
+    }
+
+    .about-visual img {
+        height: 520px !important;
+        max-height: none !important;
+    }
+
+    .about-accent {
+        display: block !important;
+    }
+
+
+    /* ================= TESTIMONIALS ================= */
+
+    .testimonials-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr)) !important;
+
+        gap: 16px !important;
+    }
+
+    .testimonial-card {
+        padding: 28px 18px !important;
+    }
+
+    .testimonial-card p {
+        font-size: 0.95rem !important;
+    }
+
+
+    /* ===============================
+   TABLET FOOTER = MOBILE STYLE
+================================ */
+
+footer.effect-texture {
+    padding: 34px 0 20px !important;
+}
+
+footer.effect-texture .container {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+}
+
+
+/* FOOTER GRID */
+
+footer .footer-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+
+    gap: 22px !important;
+
+    margin-bottom: 24px !important;
+
+    text-align: center !important;
+}
+
+
+/* BRAND */
+
+footer .footer-brand {
+    text-align: center !important;
+}
+
+footer .footer-brand .logo {
+    display: inline-block !important;
+
+    margin: 0 0 6px !important;
+
+    font-size: 1.9rem !important;
+    line-height: 1.1 !important;
+}
+
+footer .footer-brand p {
+    max-width: none !important;
+
+    margin: 0 auto !important;
+
+    font-size: 0.95rem !important;
+    line-height: 1.45 !important;
+
+    color: rgba(255,255,255,.58);
+}
+
+
+/* EXPLORE / CONNECT TITLES */
+
+footer .footer-col h4 {
+    margin-bottom: 10px !important;
+
+    font-size: 0.82rem !important;
+
+    letter-spacing: .12em !important;
+    text-transform: uppercase;
+}
+
+
+/* EXPLORE LINKS — HORIZONTAL */
+
+footer .footer-col ul {
+    display: flex !important;
+
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+
+    justify-content: center !important;
+    align-items: center !important;
+
+    gap: 8px !important;
+}
+
+footer .footer-col ul li {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+footer .footer-col:not(:last-child) ul li a {
+    display: inline-flex !important;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 7px 12px !important;
+
+    border-radius: 999px;
+
+    font-size: 0.88rem !important;
+
+    background: rgba(255,255,255,.045);
+
+    border: 1px solid rgba(255,255,255,.08);
+}
+
+footer .footer-col ul li a::before {
+    display: none !important;
+}
+
+
+/* LINKTREE */
+
+footer .linktree-btn {
+    padding: 7px 15px !important;
+
+    gap: 9px !important;
+
+    border-radius: 999px !important;
+
+    font-size: 0.88rem !important;
+
+    min-width: auto !important;
+}
+
+footer .linktree-icon {
+    width: 30px !important;
+    height: 30px !important;
+}
+
+footer .linktree-icon svg {
+    width: 16px !important;
+    height: 16px !important;
+}
+
+
+/* COPYRIGHT */
+
+footer .footer-bottom {
+    margin: 0 !important;
+
+    padding-top: 18px !important;
+
+    display: flex !important;
+
+    flex-direction: row !important;
+
+    justify-content: center !important;
+    align-items: center !important;
+
+    text-align: center !important;
+
+    font-size: 0.78rem !important;
+
+    gap: 0 !important;
+}
+
+}
+
+/* =========================================
+   MOBILE HEADER MENU — GLASS BUTTON DROPDOWN
+========================================= */
+
+@media (max-width: 767px) {
+
+    .mobile-nav {
+        display: flex !important;
+
+        position: fixed !important;
+
+        top: 78px !important;
+        right: 16px !important;
+
+        left: auto !important;
+        bottom: auto !important;
+
+        width: 205px !important;
+        height: auto !important;
+
+        padding: 0 !important;
+
+        /* NO WHITE FRAME */
+        background: transparent !important;
+
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+
+        border: none !important;
+        box-shadow: none !important;
+
+        flex-direction: column !important;
+
+        align-items: stretch !important;
+        justify-content: flex-start !important;
+
+        gap: 9px !important;
+
+        /* CLOSED */
+        opacity: 0 !important;
+        visibility: hidden !important;
+
+        pointer-events: none !important;
+
+        transform:
+            translateY(-8px)
+            scale(.96) !important;
+
+        transform-origin: top right;
+
+        transition:
+            opacity .22s ease,
+            transform .22s ease,
+            visibility .22s ease !important;
+
+        z-index: 999 !important;
+    }
+
+
+    /* OPEN MENU */
+
+    .mobile-nav.open {
+        opacity: 1 !important;
+        visibility: visible !important;
+
+        pointer-events: auto !important;
+
+        transform:
+            translateY(0)
+            scale(1) !important;
+    }
+
+
+    /* EACH SECTION = SEPARATE GLASS BUTTON */
+
+    .mobile-nav a {
+        width: 100% !important;
+
+        min-height: 48px !important;
+
+        margin: 0 !important;
+
+        padding: 11px 16px !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        border-radius: 16px !important;
+
+        /* GLASS */
+        background:
+            rgba(255,255,255,.22) !important;
+
+        backdrop-filter:
+            blur(18px)
+            saturate(170%) !important;
+
+        -webkit-backdrop-filter:
+            blur(18px)
+            saturate(170%) !important;
+
+        border:
+            1px solid
+            rgba(255,255,255,.55) !important;
+
+        box-shadow:
+            0 8px 24px rgba(0,0,0,.10),
+            inset 0 1px 0 rgba(255,255,255,.75) !important;
+
+        color: #171717 !important;
+
+        font-size: 1rem !important;
+        font-weight: 600 !important;
+
+        letter-spacing: .02em !important;
+
+        text-transform: none !important;
+
+        text-decoration: none !important;
+
+        transform: none !important;
+    }
+
+
+    /* LET'S TALK BHI SAME GLASS BUTTON */
+
+    .mobile-nav .btn,
+    .mobile-nav .btn-primary {
+        background:
+            rgba(255,255,255,.22) !important;
+
+        color: #171717 !important;
+
+        border:
+            1px solid
+            rgba(255,255,255,.55) !important;
+
+        box-shadow:
+            0 8px 24px rgba(0,0,0,.10),
+            inset 0 1px 0 rgba(255,255,255,.75) !important;
+    }
+
+
+    /* button ke andar old animation hatao */
+
+    .mobile-nav .btn::before {
+        display: none !important;
+    }
+
+
+    /* touch/mobile par jump nahi */
+
+    .mobile-nav a:hover,
+    .mobile-nav .btn:hover {
+        transform: none !important;
+    }
+
+}
+
+/* =====================================================
+   FINAL HARD STABILITY FIX
+   DESKTOP + TABLET + MOBILE
+===================================================== */
+
+/* Stop all continuous movement everywhere */
+html,
+body,
+body * ,
+body *::before,
+body *::after {
+    animation: none !important;
+}
+
+/* No smooth-scroll movement */
+html {
+    scroll-behavior: auto !important;
+}
+
+/* Prevent horizontal shake */
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+}
+
+
+/* ================= HEADER ================= */
+
+/* Header height must NEVER change on scroll */
+header,
+header.scrolled {
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+    transform: none !important;
+}
+
+/* Only allow background appearance change */
+header {
+    transition:
+        background .2s ease,
+        box-shadow .2s ease,
+        border-color .2s ease !important;
+}
+
+
+/* ================= HERO ================= */
+
+.hero,
+.hero-grid,
+.hero-content,
+.hero-visual,
+.hero-visual-wrapper,
+.hero-badge {
+    transform: none !important;
+}
+
+.hero-visual-wrapper,
+.hero-badge,
+.hero-scroll,
+.hero-label {
+    animation: none !important;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about-visual,
+.about-visual-wrapper,
+.about-accent,
+.about-founder {
+    transform: none !important;
+    animation: none !important;
+}
+
+
+/* ================= CARDS ================= */
+
+.service-card,
+.why-card,
+.testimonial-card,
+.process-step,
+.trust-inner,
+.faq-item {
+    transform: none !important;
+}
+
+
+/* HOVER par bhi movement nahi */
+
+.service-card:hover,
+.why-card:hover,
+.testimonial-card:hover,
+.process-step:hover,
+.trust-inner:hover,
+.about-founder:hover,
+.faq-item:hover {
+    transform: none !important;
+}
+
+
+/* ================= PROCESS ================= */
+
+.step-orbit,
+.step-circle,
+.step-icon,
+.process-line-fill {
+    animation: none !important;
+}
+
+.process-step:hover .step-circle,
+.process-step:hover .step-icon {
+    transform: none !important;
+}
+
+
+/* ================= TESTIMONIAL ================= */
+
+.testimonial-quote,
+.testimonial-stars svg,
+.testimonial-avatar {
+    animation: none !important;
+}
+
+.testimonial-card:hover .testimonial-avatar {
+    transform: none !important;
+}
+
+
+/* ================= FINAL CTA ================= */
+
+.final-cta::after,
+.final-cta .section-heading {
+    animation: none !important;
+}
+
+
+/* ================= EFFECTS ================= */
+
+.floating-bg .blob,
+.blob,
+.effect-glow,
+.effect-satin::before,
+.trust-divider {
+    animation: none !important;
+    transform: none !important;
+}
+
+
+/* ================= REVEAL ================= */
+
+/* Elements fade/move na karein */
+.reveal,
+.reveal.visible {
+    transform: none !important;
+    transition: none !important;
+}
+
+
+/* ================= BUTTONS / LINKS ================= */
+
+.logo:hover,
+nav a:hover,
+.btn:hover,
+.btn-primary:hover,
+.btn-outline:hover,
+.linktree-btn:hover {
+    transform: none !important;
+}
+
+
+/* ================= CUSTOM CURSOR / SMOKE ================= */
+
+/* Ye bhi visual movement create kar raha tha */
+#smokeCanvas,
+.cursor-dot,
+.cursor-ring,
+.cursor-label {
+    display: none !important;
+}
+
+body,
+a,
+button,
+.service-card,
+.why-card,
+.process-step,
+.testimonial-card,
+.faq-question {
+    cursor: auto !important;
 }
 
 </style>
@@ -2586,7 +4049,8 @@
             });
             requestAnimationFrame(animateSmoke);
         }
-        animateSmoke();
+
+        // animateSmoke();
 
         const cursorDot = document.getElementById('cursorDot');
         const cursorRing = document.getElementById('cursorRing');
@@ -2639,7 +4103,8 @@
             }
             requestAnimationFrame(animateCursor);
         }
-        animateCursor();
+        
+// animateCursor();
 
         const cursorStates = {
             link: 'cursor-link',
@@ -2694,7 +4159,6 @@
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             mobileNav.classList.toggle('open');
-            document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
         });
 
         function closeMobile() {
@@ -2744,28 +4208,6 @@
             });
         });
 
-        window.addEventListener('scroll', () => {
-            const hero = document.querySelector('.hero-visual');
-            if (hero) {
-                const scrolled = window.pageYOffset;
-                hero.style.transform = `translateY(${scrolled * 0.08}px)`;
-            }
-        });
-
-        const tiltCards = document.querySelectorAll('.service-card, .why-card, .testimonial-card');
-        tiltCards.forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-                const rotateX = ((y - centerY) / centerY) * -4;
-                const rotateY = ((x - centerX) / centerX) * 4;
-                card.style.transform = `translateY(-10px) perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
-            });
-            card.addEventListener('mouseleave', () => { card.style.transform = ''; });
-        });
 
         const counterObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
