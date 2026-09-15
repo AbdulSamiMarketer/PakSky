@@ -3400,25 +3400,46 @@ nav a:hover,
 }
 
 
-/* ================= CUSTOM CURSOR / SMOKE ================= */
-
-/* Ye bhi visual movement create kar raha tha */
-#smokeCanvas,
-.cursor-dot,
-.cursor-ring,
-.cursor-label {
-    display: none !important;
+/* Smoke effect on desktop */
+@media (min-width: 769px) and (hover: hover) and (pointer: fine) {
+    #smokeCanvas {
+        display: block !important;
+    }
 }
 
-body,
-a,
-button,
-.service-card,
-.why-card,
-.process-step,
-.testimonial-card,
-.faq-question {
-    cursor: auto !important;
+/* Hide smoke on mobile and touch devices */
+@media (max-width: 768px), (hover: none), (pointer: coarse) {
+    #smokeCanvas {
+        display: none !important;
+    }
+}
+
+/* Custom cursor on desktop */
+@media (min-width: 769px) and (hover: hover) and (pointer: fine) {
+    .cursor-dot,
+    .cursor-ring,
+    .cursor-label {
+        display: block !important;
+    }
+
+    body,
+    body * {
+        cursor: none !important;
+    }
+}
+
+/* Normal cursor on smaller screens and touch devices */
+@media (max-width: 768px), (hover: none), (pointer: coarse) {
+    .cursor-dot,
+    .cursor-ring,
+    .cursor-label {
+        display: none !important;
+    }
+
+    body,
+    body * {
+        cursor: auto !important;
+    }
 }
 
 </style>
@@ -4050,7 +4071,7 @@ button,
             requestAnimationFrame(animateSmoke);
         }
 
-        // animateSmoke();
+        animateSmoke();
 
         const cursorDot = document.getElementById('cursorDot');
         const cursorRing = document.getElementById('cursorRing');
@@ -4104,7 +4125,7 @@ button,
             requestAnimationFrame(animateCursor);
         }
         
-// animateCursor();
+animateCursor();
 
         const cursorStates = {
             link: 'cursor-link',
