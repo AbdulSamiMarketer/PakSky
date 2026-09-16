@@ -3445,6 +3445,27 @@ nav a:hover,
 
 </style>
 
+<style>
+/* Founder card — clean background and soft shadow */
+.about-founder {
+  background: #faf8f4;
+  border: 1px solid rgba(139, 115, 85, 0.12);
+  box-shadow: 0 6px 18px rgba(45, 35, 25, 0.05);
+}
+
+/* Remove shine and texture over the text */
+.about-founder::before,
+.about-founder::after {
+  content: none;
+  display: none;
+}
+
+/* Soften the profile image shadow */
+.about-founder img {
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+</style>
+
 </head>
 <body>
 
