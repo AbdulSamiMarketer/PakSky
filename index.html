@@ -2105,17 +2105,11 @@
 
         margin-top: 4px;
 
-        transform: none !important;
-        animation: none !important;
-
         overflow: visible;
     }
 
     .hero-visual-wrapper {
         width: 100%;
-
-        animation: none !important;
-        transform: none !important;
 
         border-radius: 18px;
     }
@@ -2151,9 +2145,6 @@
             0 !important;
 
         padding: 16px 18px;
-
-        animation: none !important;
-        transform: none !important;
     }
 
     .hero-badge-icon {
@@ -2268,8 +2259,6 @@
     }
 
     .about-visual-wrapper {
-        animation: none !important;
-        transform: none !important;
     }
 
     .about-visual img {
@@ -2290,7 +2279,7 @@
 
         padding: 22px 18px;
 
-        transform: none !important;
+    
     }
 
 
@@ -2301,7 +2290,7 @@
     }
 
     .process-step {
-        transform: none !important;
+       
     }
 
 
@@ -2337,7 +2326,7 @@
     .about-visual-wrapper,
     .hero-badge,
     .testimonial-quote {
-        animation: none !important;
+       
     }
 
 }
@@ -2352,149 +2341,9 @@
     .process-step:hover,
     .trust-inner:hover,
     .about-founder:hover {
-        transform: none !important;
+       
     }
 
-}
-
-/* =====================================================
-   FINAL FIX — STOP ALL UNWANTED UP/DOWN MOVEMENT
-   DESKTOP + TABLET + MOBILE
-===================================================== */
-
-/* normal scrolling — no automatic smooth movement */
-html {
-    scroll-behavior: auto !important;
-}
-
-
-/* -----------------------------------------
-   FIX HEADER JUMP
-   header height scroll par change nahi hogi
------------------------------------------ */
-
-header,
-header.scrolled {
-    padding-top: 16px !important;
-    padding-bottom: 16px !important;
-}
-
-/* sirf visual background animate ho,
-   header size/layout nahi */
-header {
-    transition:
-        background-color .3s ease,
-        background .3s ease,
-        box-shadow .3s ease,
-        border-color .3s ease !important;
-}
-
-
-/* -----------------------------------------
-   BACKGROUND BLOBS FREEZE
------------------------------------------ */
-
-.floating-bg .blob,
-.blob {
-    animation: none !important;
-    transform: none !important;
-}
-
-
-/* -----------------------------------------
-   HERO — COMPLETELY STABLE
------------------------------------------ */
-
-.hero-visual {
-    transform: none !important;
-}
-
-.hero-visual-wrapper {
-    animation: none !important;
-    transform: none !important;
-}
-
-.hero-badge {
-    animation: none !important;
-    transform: none !important;
-}
-
-.hero-scroll {
-    animation: none !important;
-}
-
-
-/* -----------------------------------------
-   ABOUT IMAGE — STOP FLOATING
------------------------------------------ */
-
-.about-visual-wrapper {
-    animation: none !important;
-    transform: none !important;
-}
-
-
-/* -----------------------------------------
-   REVEAL ELEMENTS
-   fade rahega, upar se neeche move nahi karega
------------------------------------------ */
-
-.reveal {
-    transform: none !important;
-    transition:
-        opacity .6s ease !important;
-}
-
-.reveal.visible {
-    transform: none !important;
-}
-
-
-/* -----------------------------------------
-   OTHER CONSTANT MOVEMENT
------------------------------------------ */
-
-.testimonial-quote {
-    animation: none !important;
-    transform: none !important;
-}
-
-.trust-divider {
-    animation: none !important;
-}
-
-.about-accent {
-    animation: none !important;
-}
-
-.final-cta::after {
-    animation: none !important;
-}
-
-
-/* -----------------------------------------
-   PREVENT CARD MOVEMENT / TILT
------------------------------------------ */
-
-.service-card,
-.why-card,
-.testimonial-card,
-.process-step,
-.trust-inner,
-.about-founder {
-    transform: none !important;
-}
-
-
-/* cards hover par bhi page ko upar neeche na karein */
-
-.service-card:hover,
-.why-card:hover,
-.testimonial-card:hover,
-.process-step:hover,
-.trust-inner:hover,
-.about-founder:hover {
-    transform: none !important;
 }
 
 </style>
@@ -2627,7 +2476,6 @@ header {
     }
 
     footer .footer-col ul li a:hover {
-        transform: none !important;
     }
 
 
@@ -3190,7 +3038,7 @@ footer .footer-bottom {
 
         text-decoration: none !important;
 
-        transform: none !important;
+       
     }
 
 
@@ -3224,181 +3072,11 @@ footer .footer-bottom {
 
     .mobile-nav a:hover,
     .mobile-nav .btn:hover {
-        transform: none !important;
+     
     }
 
 }
 
-/* =====================================================
-   FINAL HARD STABILITY FIX
-   DESKTOP + TABLET + MOBILE
-===================================================== */
-
-/* Stop all continuous movement everywhere */
-html,
-body,
-body * ,
-body *::before,
-body *::after {
-    animation: none !important;
-}
-
-/* No smooth-scroll movement */
-html {
-    scroll-behavior: auto !important;
-}
-
-/* Prevent horizontal shake */
-html,
-body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden !important;
-}
-
-
-/* ================= HEADER ================= */
-
-/* Header height must NEVER change on scroll */
-header,
-header.scrolled {
-    padding-top: 16px !important;
-    padding-bottom: 16px !important;
-    transform: none !important;
-}
-
-/* Only allow background appearance change */
-header {
-    transition:
-        background .2s ease,
-        box-shadow .2s ease,
-        border-color .2s ease !important;
-}
-
-
-/* ================= HERO ================= */
-
-.hero,
-.hero-grid,
-.hero-content,
-.hero-visual,
-.hero-visual-wrapper,
-.hero-badge {
-    transform: none !important;
-}
-
-.hero-visual-wrapper,
-.hero-badge,
-.hero-scroll,
-.hero-label {
-    animation: none !important;
-}
-
-
-/* ================= ABOUT ================= */
-
-.about-visual,
-.about-visual-wrapper,
-.about-accent,
-.about-founder {
-    transform: none !important;
-    animation: none !important;
-}
-
-
-/* ================= CARDS ================= */
-
-.service-card,
-.why-card,
-.testimonial-card,
-.process-step,
-.trust-inner,
-.faq-item {
-    transform: none !important;
-}
-
-
-/* HOVER par bhi movement nahi */
-
-.service-card:hover,
-.why-card:hover,
-.testimonial-card:hover,
-.process-step:hover,
-.trust-inner:hover,
-.about-founder:hover,
-.faq-item:hover {
-    transform: none !important;
-}
-
-
-/* ================= PROCESS ================= */
-
-.step-orbit,
-.step-circle,
-.step-icon,
-.process-line-fill {
-    animation: none !important;
-}
-
-.process-step:hover .step-circle,
-.process-step:hover .step-icon {
-    transform: none !important;
-}
-
-
-/* ================= TESTIMONIAL ================= */
-
-.testimonial-quote,
-.testimonial-stars svg,
-.testimonial-avatar {
-    animation: none !important;
-}
-
-.testimonial-card:hover .testimonial-avatar {
-    transform: none !important;
-}
-
-
-/* ================= FINAL CTA ================= */
-
-.final-cta::after,
-.final-cta .section-heading {
-    animation: none !important;
-}
-
-
-/* ================= EFFECTS ================= */
-
-.floating-bg .blob,
-.blob,
-.effect-glow,
-.effect-satin::before,
-.trust-divider {
-    animation: none !important;
-    transform: none !important;
-}
-
-
-/* ================= REVEAL ================= */
-
-/* Elements fade/move na karein */
-.reveal,
-.reveal.visible {
-    transform: none !important;
-    transition: none !important;
-}
-
-
-/* ================= BUTTONS / LINKS ================= */
-
-.logo:hover,
-nav a:hover,
-.btn:hover,
-.btn-primary:hover,
-.btn-outline:hover,
-.linktree-btn:hover {
-    transform: none !important;
-}
 
 
 /* Smoke effect on desktop */
@@ -3453,16 +3131,110 @@ nav a:hover,
   box-shadow: 0 6px 18px rgba(45, 35, 25, 0.05);
 }
 
-/* Remove shine and texture over the text */
-.about-founder::before,
-.about-founder::after {
-  content: none;
-  display: none;
-}
+
 
 /* Soften the profile image shadow */
 .about-founder img {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+</style>
+
+<style>
+/* Background circles ki movement restore */
+body .floating-bg .blob {
+    animation: floatingMove 25s ease-in-out infinite alternate !important;
+}
+
+body .floating-bg .blob-one {
+    animation-delay: -5s !important;
+}
+
+body .floating-bg .blob-two {
+    animation-delay: -10s !important;
+}
+
+body .floating-bg .blob-three {
+    animation-delay: -15s !important;
+}
+
+body .floating-bg .blob-four {
+    animation-delay: -20s !important;
+}
+
+body .floating-bg .blob-five {
+    animation-delay: -25s !important;
+}
+</style>
+
+<style>
+/* Discover, Plan, Launch, Optimize — rotating rings */
+body .process-step .step-orbit {
+    animation: orbitSpin 20s linear infinite !important;
+}
+</style>
+
+<style>
+.testimonial-card.reveal {
+    transition:
+        opacity 0.8s ease,
+        transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.testimonial-card.reveal.visible {
+    transition-delay: 0s;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .testimonial-card.reveal.visible:hover {
+        transform: translateY(-8px) scale(1.02);
+    }
+}
+</style>
+
+<style>
+/* Tablet layout stability */
+@media (min-width: 768px) and (max-width: 1024px) {
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: clip;
+    }
+
+    /* Scroll par header ki height same rahe */
+    #header,
+    #header.scrolled {
+        padding: 16px 0 !important;
+        border-bottom: 1px solid transparent;
+        transition:
+            background-color 0.3s ease,
+            box-shadow 0.3s ease,
+            border-color 0.3s ease;
+    }
+
+    #header .header-inner {
+        min-height: 48px;
+    }
+
+    #header .logo:hover {
+        transform: none;
+    }
+
+    /* Grid content screen se bahar na nikle */
+    .hero-grid > *,
+    .about-grid > *,
+    .header-inner > * {
+        min-width: 0;
+    }
+
+    .hero-buttons {
+        flex-wrap: wrap;
+    }
+
+    /* Browser toolbar se hero ki height na badle */
+    #home.hero {
+        min-height: 100svh !important;
+    }
 }
 </style>
 
